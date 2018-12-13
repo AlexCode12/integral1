@@ -8,12 +8,12 @@ public class integral {
     public static double k = 250;
 
     public static double integral (double a, double b) {
-        int n = 10;
+        int n = 1000;
         double deltax = (b-a)/n;
         double resultat = 0;
 
         for (int k = 0 ; k < n ; k++) {
-            resultat = f(a/k * deltax)*deltax;
+            resultat += f(a+k * deltax)*deltax;
         }
 
         return resultat;
@@ -24,6 +24,6 @@ public class integral {
     }
 
     public static void main(String[] args) {
-        System.out.println(integral(1.1, 5));
+        System.out.println(integral(2, 5));
     }
 }
