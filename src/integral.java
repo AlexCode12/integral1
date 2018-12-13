@@ -1,11 +1,29 @@
-// 1.  Skriv in funktionen
-// 2.  Skriv in högsta värde
-// 3.  Skriv in lägsta värde
+// Läs in A och B
+// Deklarera f
+
 // 4.  Beräkna integralen. Detta görs via en loop som börjar vid det minsta värdet och avslutas vid det största.
 
 
 public class integral {
-    public static void main(String[] args) {
+    public static double k = 250;
 
+    public static double integral (double a, double b) {
+        int n = 10;
+        double deltax = (b-a)/n;
+        double resultat = 0;
+
+        for (int k = 0 ; k < n ; k++) {
+            resultat = f(a/k * deltax)*deltax;
+        }
+
+        return resultat;
+    }
+    public static double f(double x) {
+        double k = 250;
+        return k*x;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(integral(1.1, 5));
     }
 }
